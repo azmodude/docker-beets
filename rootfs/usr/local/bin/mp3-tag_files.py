@@ -33,8 +33,8 @@ for mp3file in glob.glob('*.mp3'):
         else:
             raise BaseException("Invalid filename '%s'" % mp3file)
 
-    if trackmax.get(disc, 0) < tracknumber:
-        trackmax[disc] = tracknumber
+    if trackmax.get(disc, 0) < int(tracknumber):
+        trackmax[disc] = int(tracknumber)
 
 for disc in trackmax:
     print("Disc %s has %s tracks." % (disc, trackmax[disc]))

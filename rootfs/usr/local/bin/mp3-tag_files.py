@@ -59,7 +59,7 @@ for mp3file in glob.glob('*.mp3'):
     audiofile.tag.track_num = (tracknumber, trackmax[disc])
     audiofile.tag.disc_num = (disc, discmax)
     audiofile.tag.comment = ''
-    audiofile.tag.album_artist = unicode(albumartist)
+    audiofile.tag.album_artist = albumartist
     audiofile.tag.save()
 
     print("Tagged %s" % mp3file)

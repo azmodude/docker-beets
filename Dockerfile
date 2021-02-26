@@ -3,7 +3,8 @@ LABEL maintainer Gordon Schulz <gordon@gordonschulz.de>
 
 RUN set -x && \
         dnf -y update && \
-        dnf -y install beets beets-plugins python-eyed3 && \
+        dnf -y install beets beets-plugins \
+            python-eyed3 python3-pillow python3-requests && \
         dnf clean all && \
         rm -rf /var/cache/yum
 

@@ -22,7 +22,7 @@ for mp3file in glob.glob('*.mp3'):
         disc = match.group(1)
         tracknumber = match.group(2)
 
-        if discmax < disc:
+        if discmax < int(disc):
             discmax = disc
     else:
         match = re.search(mp3filematch_nodisc, mp3file)

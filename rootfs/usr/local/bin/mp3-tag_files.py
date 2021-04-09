@@ -7,7 +7,7 @@ import eyed3
 
 mp3filematch = re.compile(r'^(\d)(\d{2})')
 mp3filematch_nodisc = re.compile(r'^(\d{2})')
-discmax = None
+discmax = 0
 trackmax = dict()
 
 try:

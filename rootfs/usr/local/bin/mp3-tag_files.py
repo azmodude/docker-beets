@@ -19,15 +19,15 @@ except IndexError:
 for mp3file in glob.glob('*.mp3'):
     match = re.search(mp3filematch, mp3file)
     if match:
-        disc = match.group(1)
-        tracknumber = match.group(2)
+        disc = int(match.group(1))
+        tracknumber = int(match.group(2))
 
-        if discmax < int(disc):
+        if discmax < disc:
             discmax = disc
     else:
         match = re.search(mp3filematch_nodisc, mp3file)
         if match:
-            tracknumber = match.group(1)
+            tracknumber = int(match.group(1))
             disc = 1
             discmax = 1
         else:

@@ -43,8 +43,8 @@ for mp3file in glob.glob('*.mp3'):
     print("Tagging %s" % mp3file)
     match = re.search(mp3filematch, mp3file)
     if match:
-        disc = match.group(1)
-        tracknumber = match.group(2)
+        disc = int(match.group(1))
+        tracknumber = int(match.group(2))
     else:
         match = re.search(mp3filematch_nodisc, mp3file)
         if match:

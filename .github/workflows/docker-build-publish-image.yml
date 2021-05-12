@@ -37,7 +37,7 @@ jobs:
         run: echo "COMMIT_SHA=${GITHUB_SHA:10}" >> $GITHUB_ENV
       - name: "Check for .env file existence"
         id: check_env_file
-        uses: andstor/file-existence-action@v1
+        uses: andstor/file-existence-action@v1.0.1
         with:
           files: ".env"
       - name: Set ENV variables from supplied .env file

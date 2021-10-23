@@ -3,7 +3,9 @@ library: /library/musiclibrary.blb
 plugins: replaygain scrub embedart fetchart lastgenre acousticbrainz lyrics
 per_disc_numbering: yes
 art_filename: cover
-move: yes
+
+import:
+  move: yes
 
 replaygain:
         overwrite: yes

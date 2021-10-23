@@ -5,7 +5,7 @@ RUN set -x && \
         dnf -y update && \
         dnf -y install beets beets-plugins \
             python-eyed3 python3-pillow python3-requests \
-            findutils && \
+            findutils tree && \
             dnf clean all && \
         rm -rf /var/cache/yum
 
